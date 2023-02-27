@@ -1,0 +1,654 @@
+:root {
+  --primary-color: #0d275d;
+  --secondary-color: #fff;
+  --button-color: #EE6352;
+  --icon-color: #0096FF;
+  --bg-primary: rgba(191, 196, 241, 0.2);
+  --bg-secondary: #fff;
+}
+
+.admin-container {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.container__sidebar {
+  height: 100vh;
+  width: 20vw;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10rem;
+}
+
+
+.container__screen {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-secondary);
+  height: 100vh;
+  width: 90%;
+  justify-content: space-around;
+}
+
+.container__sidebar__button {
+  width: 90%;
+  height: 5rem;
+  background-color: var(--button-color);
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  margin: 1.2rem;
+  color: white;
+}
+
+.container__screen__navbar {
+  width: 100%;
+  height: 6rem;
+  background-color: var(--primary-color);
+  align-self: flex-start;
+  top: 0%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.container__screen__login {
+  margin-top: 6rem;
+  align-self: center;
+  justify-content: center;
+  background: rgba(191, 196, 241, 0.2);
+  width: 95%;
+  height: 85%;
+  scrollbar-color: #d4aa70 #e4e4e4;
+}
+
+.container__screen__login::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  border-radius: 100px;
+}
+
+.container__sidebar__logo {
+  width: 100%;
+  height: 10rem;
+  background-color: var(--primary-color);
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 15%;
+  font-weight: bold;
+}
+
+.container__screen__navbar__search {
+  width: 45%;
+  height: 4.1rem;
+  align-self: center;
+  border-radius: 1.5rem;
+  font-size: 18px;
+  text-align: center;
+  margin-left: 2rem;
+  border: none;
+}
+
+.container__screen__navbar__button {
+  background-color: var(--bg-secondary);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__screen__navbar__button:hover {
+  cursor: pointer;
+}
+
+.button__group {
+  height: 100%;
+  width: 80%;
+  padding-right: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__screen__navbar__button__large {
+  background-color: var(--bg-secondary);
+  width: 6rem;
+  height: 4rem;
+  border-radius: 4rem;
+  margin: 1.5rem;
+}
+
+.screen__title {
+  top: 0px;
+  width: 150%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px;
+}
+
+p {
+  font-size: 1.7rem;
+  width: 25%;
+  height: 100%;
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: bold;
+}
+
+.pclass {
+  width: 25%;
+  height: 100%;
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: bold;
+}
+
+.title-table {
+  font-size: 1.8rem;
+  width: 25%;
+  height: 100%;
+  font-weight: bolder;
+  text-align: center;
+  color: var(--icon-color);
+  margin-bottom: 1.2rem;
+}
+
+.screen__header {
+  width: 100%;
+  height: 8rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.screen__header__title {
+  font-size: 20px;
+  color: var(--icon-color);
+}
+
+.screen__header__button {
+  height: 4rem;
+  width: 12rem;
+  border-radius: 2rem;
+  background-color: var(--button-color);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.screen__header__button:hover  {
+  background-color: var(--primary-color);
+  color: var(--bg-secondary);
+}
+
+/* ############################start button ############################### */
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0px;
+  font-size: inherit;
+  font-family: inherit;
+  margin: auto;
+  line-height: 1.25rem;
+  font-size: 1.7rem;
+}
+
+button.learn-more {
+  width: 22rem;
+  height: auto;
+}
+
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 5rem;
+  height: 5rem;
+  background: var(--button-color);
+  border-radius: 2.625rem;
+}
+
+button.learn-more:focus .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 5rem;
+  height: 5rem;
+  background: var(--primary-color);
+  border-radius: 2.625rem;
+}
+
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  margin: auto;
+  background: var(--bg-secondary);
+
+}
+
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0825rem;
+  width: 0.825rem;
+  height: 0.825rem;
+  border-top: 0.125rem solid var(--secondary-color);
+  border-right: 0.125rem solid var(--secondary-color);
+  transform: rotate(45deg);
+  align-items: center;
+  text-align: center;
+}
+
+
+button.learn-more:focus .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  margin: auto;
+  background: var(--button-color);
+}
+
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
+
+button.learn-more:focus .button-text:focus {
+  color: var(--button-color);
+}
+
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: var(--secondary-color);
+  transform: translate(1rem, 0);
+}
+
+button:focus .circle .icon.arrow {
+  background: var(--primary-color);
+  transform: translate(1rem, 0);
+}
+
+
+button:hover .button-text {
+  color: var(--secondary-color);
+}
+
+/* ##########################new button ####################################################### */
+
+a:hover {
+  animation: shake3856 0.3s linear infinite both;
+  cursor: pointer;
+  background-color: #ffffffc0;
+}
+
+@keyframes shake3856 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+
+/* #########################signInButton################################# */
+
+.signInButton {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 1.8rem 4rem;
+  margin: 0;
+  margin-top: 3rem;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 24px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: var(--button-color);
+  color: ghostwhite;
+}
+
+.signInButton span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+.signInButton:hover span {
+  color: var(--primary-color);
+}
+
+.signInButton::before,
+button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.signInButton::before {
+  content: "";
+  background: var(--primary-color);
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.signInButton:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+/* #############################button-dasbord####################################### */
+
+
+
+
+
+
+/* ###################################booking####################################### */
+
+.metier {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100vw;
+  max-height: 100vh;
+  position: relative;
+}
+
+.metier__heading {
+  width: 100vw;
+  height: 15vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metier__body {
+  width: 100vw;
+  height: 85vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  margin-bottom: 1rem;
+  flex-direction: row;
+}
+
+.metier__heading__title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: rgba(13, 33, 73, 0.8);
+}
+
+.metier__body__slider {
+  background-color: rgba(109, 157, 197, 0.08);
+  width: 100%;
+  height: 100%;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metier__body__slider__calendar {
+  width: 50%;
+  height: 100%;
+
+  border-radius: 30px 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.calendar__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgba(13, 33, 73, 0.8);
+
+}
+
+.metier__body__slider__input {
+  width: 50%;
+  height: 100%;
+
+  border-radius: 0 30px 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.calendar__button {
+  background-color: #ee6352;
+  border-radius: 20px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.calendar__input {
+  width: 70%;
+  height: 4.5rem;
+  background-color: rgba(217, 217, 217, 0.7);
+  margin: 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.calendar__input__sub {
+  width: 48%;
+  height: 4.5rem;
+  background-color: rgba(217, 217, 217, 0.7);
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* #############################################input#################################### */
+
+.checkbox-wrapper-31:hover .check {
+  stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-31 {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.checkbox-wrapper-31 .background {
+  fill: #ccc;
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+
+.checkbox-wrapper-31 .stroke {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  stroke-dashoffset: 100;
+  stroke-dasharray: 100;
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+
+.checkbox-wrapper-31 .check {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  stroke-dashoffset: 22;
+  stroke-dasharray: 22;
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+
+.checkbox-wrapper-31 input[type=checkbox] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+  opacity: 0;
+  -appearance: none;
+  -webkit-appearance: none;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:hover {
+  cursor: pointer;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:checked + svg .background {
+  fill: #6cbe45;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:checked + svg .stroke {
+  stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:checked + svg .check {
+  stroke-dashoffset: 0;
+}
